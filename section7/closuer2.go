@@ -18,8 +18,10 @@ func main() {
 }
 
 func increaseCnt() func() int {
-	n := 0
+	var n int = 0
+	fmt.Println(n)
 	return func() int {
+		fmt.Println("START")
 		n += 1
 		return n
 	}
